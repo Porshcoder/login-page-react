@@ -7,8 +7,8 @@
 
 body{
   background-color: #0f0c29;
-  background: -webkit-linear-gradient(to right,#24243e,#302b63,#0f0c29);
-  background:linear-gradient(to right,#24243e,#302b63,#0f0c29)
+  background: -webkit-linear-gradient(to left,#24243e,#302b63,#0f0c29);
+  background:linear-gradient(to left,#24243e,#302b63,#0f0c29)
 }
 
 .App{
@@ -69,6 +69,7 @@ margin: 2em auto;
 #form  input, .btn{
 border: 1px solid #e9ecef;
 padding: .9em 1em;
+border-radius: 20px;
 }
 
 #form  input:focus{

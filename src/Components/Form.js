@@ -18,12 +18,14 @@ const onSubmit=data=>console.log(data);
                 <form id='form' className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
                     <input type='text' {...register('username',{required:true})} placeholder ='username or email'/>
                     <input type='text' {...register('password',{required:true})} placeholder ='password'/>
-                    <input type='text' {...register('confirmpwd')} placeholder ='confirm password'/>
+                    <input type='text' {...register('confirmpwd',{required:true})} placeholder ='confirm password'/>
                     <input type='text' {...register("mobile", {required : true, maxLength: 10})} placeholder ='mobile number'/>
                     {errors.mobile?.type === "required" && "Mobile Number is required"}
                     {errors.mobile?.type === "maxLength" && "Max Length Exceed"}
                     <br/>
                     {errors.username?.type === "required" && "Fill the blank to proceed!"}
+                    <br/>
+                    {errors.confirmpwd?.type === "required" && "Fill the blank to proceed!"}
                     <br/>
                     {errors.password?.type === "required" && "Password is required!"}
                     <button className='btn'>Sign In</button>
